@@ -4,11 +4,12 @@ import WelcomeScreen from '../../../components/template/WelcomeScreen'
 import FlagButton from '../../../components/uikit/FlagButton'
 import { useNavigation } from '@react-navigation/native';
 import LoginScreen from '../login/LoginScreen';
+import { StackNavigationType } from '../../../../App';
 
 
 export default function LanguageScreen() {
 
-    const navigation = useNavigation();
+    const navigation = useNavigation<StackNavigationType>();
 
     return (
         <WelcomeScreen title="Выберите язык" titleMarginBT={35} >
