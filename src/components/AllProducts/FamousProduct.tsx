@@ -3,6 +3,7 @@ import React from 'react'
 import ProductsTitle from '../uikit/ProductsTitle'
 import { useNavigation } from '@react-navigation/native';
 import ProductsList from './MainProduct/ProductsList';
+import { StackNavigationType } from '../../../App';
 
 const ProductsData = [
     {
@@ -36,7 +37,7 @@ const ProductsData = [
 
 export default function FamousProduct() {
 
-    const navigation = useNavigation();
+    const navigation = useNavigation<StackNavigationType>();
 
     return (
 

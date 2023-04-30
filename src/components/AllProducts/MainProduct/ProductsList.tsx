@@ -13,9 +13,6 @@ type ProductItemCardProps = {
     buttonText?: string;
     icon?: boolean;
     showButton?: boolean;
-    text1?: string;
-    text2?: string;
-    newsText?: boolean;
 };
 
 export default function ProductsList(props: ProductItemCardProps) {
@@ -36,22 +33,6 @@ export default function ProductsList(props: ProductItemCardProps) {
                     <Text style={styles.oldPrice}>{props.oldPrice}</Text>
                     <Text style={styles.newPrice}>{props.newPrice}</Text>
                 </View>
-                {props.newsText && (
-                    <>
-                        <Text style={{
-                            fontWeight: '600',
-                            fontSize: 15,
-                            color: COLORS.black,
-                            fontFamily: 'Akshar'
-                        }}>{props.text1}</Text>
-                        <Text style={{
-                            fontWeight: '600',
-                            fontSize: 15,
-                            color: COLORS.black,
-                            fontFamily: 'Gilroy'
-                        }}>{props.text2}</Text>
-                    </>
-                )}
                 {props.showButton && (<TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>{props.buttonText}</Text>
                     {props.icon && (<BasketIcon2 />)}

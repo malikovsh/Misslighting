@@ -14,7 +14,8 @@ import News from './src/screens/Allproducts/News'
 import SignUPScreen from './src/screens/Auth/signUP/SignUPScreen'
 import { StackNavigationProp } from '@react-navigation/stack'
 
-type ScreenNames = ['Tab', 'SignUp'];
+type ScreenNames = ['Tab', 'SignUp', 'Language', 'LogIn', 'Famouse',
+  'Discount', 'Newproduct', 'Orderproduct', 'Market', 'News'];
 type RootStackParamList = Record<ScreenNames[number], undefined>
 export type StackNavigationType = StackNavigationProp<RootStackParamList>
 
