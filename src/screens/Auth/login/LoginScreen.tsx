@@ -16,7 +16,7 @@ const LoginScreen = () => {
     return (
         <WelcomeScreen title='Вход' marginVertical={20} >
             <InputText placeholder='Ваш номер' />
-            <InputText placeholder='Ваш пароль' />
+            {/* <InputText placeholder='Ваш пароль' /> */}
             <TouchableOpacity style={{ marginBottom: 20 }}>
                 <Text style={{ fontSize: 16, fontWeight: '700', color: '#000' }}>Забыли пароль?</Text>
             </TouchableOpacity>
