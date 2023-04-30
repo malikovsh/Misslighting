@@ -1,0 +1,67 @@
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import React from 'react'
+import { COLORS } from '../../constants/colors'
+
+type Props = {
+    label?: string;
+    viewStyle?: object;
+    textStyle?: object;
+    checkout?: any;
+};
+
+export default function CheckBox(props: Props) {
+    return (
+        <View style={styles.checkBox} {...props.viewStyle}>
+            <View style={styles.checkBoxItem}>
+                <View
+                    style={[
+                        styles.checkBoxItemBox,
+                        {
+                            backgroundColor: props.checkout
+                                ? COLORS.activeButtonBgColor
+                                : COLORS.white,
+                        },
+                    ]}></View>
+            </View>
+            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: 'center', columnGap: 3 }}>
+                <Text style={styles.checkBoxText} {...props.textStyle}>
+                    {props.label}
+                </Text>
+                <TouchableOpacity>
+                    <Text style={{ textDecorationLine: "underline" }}>
+                        политикой конфиденциальности
+                    </Text>
+                </TouchableOpacity>
+            </View>
+        </View>
+    )
+}
+
+
+const styles = StyleSheet.create({
+    checkBox: {
+        width: '100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 30,
+    },
+    checkBoxItem: {
+        width: 22,
+        height: 22,
+        backgroundColor: COLORS.white,
+        borderRadius: 5,
+        borderWidth: 1,
+        borderColor: COLORS.borderRsColor,
+        marginRight: 10,
+        padding: 2,
+    },
+    checkBoxItemBox: {
+        width: '100%',
+        height: '100%',
+        borderRadius: 5,
+    },
+    checkBoxText: {
+        fontSize: 13,
+        color: COLORS.checkboxTextColor,
+    },
+})
