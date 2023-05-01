@@ -17,7 +17,7 @@ type ProductItemCardProps = {
 
 export default function ProductsList(props: ProductItemCardProps) {
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container}>
             <Image style={{
                 width: 162,
                 height: 140,
@@ -38,7 +38,7 @@ export default function ProductsList(props: ProductItemCardProps) {
                     {props.icon && (<BasketIcon2 />)}
                 </TouchableOpacity>)}
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
